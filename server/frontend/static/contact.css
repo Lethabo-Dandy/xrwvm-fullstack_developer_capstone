@@ -1,0 +1,60 @@
+img{
+    width: 60%;
+    /* align-self: center; */
+}
+  
+.card{
+    /* border: rgb(103, 102, 105) 3px solid; */
+    width: 50%;
+    border:none;
+}
+#contactus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+    margin-top: 5%;
+    
+} 
+#maincard{
+    border: rgb(103, 102, 105) 3px solid;
+    border-radius: 30px; 
+}
+#carsjpeg{
+    margin: 2% 0% 2% 0%;
+}
+.card-group{
+    border-top: rgb(103, 102, 105) 2px solid;
+    margin:0% 1% 0% 1%;
+    padding:0% 1% 0% 1%;
+}
+#imgcont{
+    border: none; 
+    border-right: rgb(103, 102, 105) 2px solid;
+    /* background-color: red; */
+    margin:1% 0% 1% 0%;
+}
+#continfdiv{
+    border: none; 
+    
+}
+#continf{
+    align-items: center;
+    border: none;
+    /* background-color: green; */
+}
+#conttitle{
+    /* background-color: green; */
+    margin: 0%;
+    text-align: center;
+    color: darkturquoise;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#contval{
+    /* background-color: red; */
+    margin: 0%;
+    text-align: center;
+    color: darkturquoise;
+}
