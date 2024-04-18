@@ -70,13 +70,12 @@ app.get('/fetchDealers', async (req, res) => {
 
 // Express route to fetch Dealers by a particular state
 app.get('/fetchDealers/:state', async (req, res) => {
-//Write your code here
+    //Write your code here
     try {
-        const dealers= await Dealerships.find({state: req.params.state})
-        res.json(dealers)
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({error:'Error while fetching documents'});
+        const documents = await Dealerships.find({state: req.params.state});
+        res.json(documents);
+    } catch (err) {
+        res.status(500).json({ error: err});
     }
 });
 
