@@ -140,8 +140,6 @@ def get_dealer_reviews(request, dealer_id):
             if response is not None:
                 review_detail['sentiment'] = response.get('sentiment', None)
             else:
-    # Handle the case where response is None
-    # For example, set sentiment to a default value or log a warning
                 review_detail['sentiment'] = None
         return JsonResponse({"status": 200, "reviews": reviews})
     else:
