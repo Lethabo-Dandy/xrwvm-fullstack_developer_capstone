@@ -1,6 +1,6 @@
 # Uncomment the required imports before adding the code
 
-#from django.shortcuts import render
+# from django.shortcuts import render
 # from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
 # from django.shortcuts import get_object_or_404, render, redirect
@@ -14,7 +14,7 @@ import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .populate import initiate
-#from .restapis import get_request, analyze_review_sentiments, post_review
+from .restapis import get_request, analyze_review_sentiments  # post_review
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -102,7 +102,7 @@ def get_cars(request):
 # a list of dealerships
 # def get_dealerships(request):
 # ...
-# Update the `get_dealerships` render list of dealerships 
+# Update the `get_dealerships` render list of dealerships
 # all by default, particular state if state is passed
 
 
