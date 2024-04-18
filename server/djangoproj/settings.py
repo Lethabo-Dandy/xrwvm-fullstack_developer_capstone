@@ -28,8 +28,19 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'https://yousufhashmi-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', 'https://yousufhashmi-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
-CSRF_TRUSTED_ORIGINS = ['https://yousufhashmi-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', 'https://yousufhashmi-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+ALLOWED_HOSTS = ['localhost',
+                 """https://yousufhashmi-8000.
+                 theianext-1-labs-prod-misc-tools-us-east-0.
+                 proxy.cognitiveclass.ai""",
+                 """https://yousufhashmi-8000.
+                 theiadockernext-1-labs-prod-theiak8s-4-tor01.
+                 proxy.cognitiveclass.ai"""]
+CSRF_TRUSTED_ORIGINS = ["""https://yousufhashmi-8000.
+                        theianext-1-labs-prod-misc-tools-us-east-0.
+                        proxy.cognitiveclass.ai""",
+                        """https://yousufhashmi-8000.
+                        theiadockernext-1-labs-prod-theiak8s-4-tor01.
+                        proxy.cognitiveclass.ai"""]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -61,9 +72,9 @@ ROOT_URLCONF = 'djangoproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'frontend/static'),
-                os.path.join(BASE_DIR, 'frontend/build'),
-                os.path.join(BASE_DIR, 'frontend/build/static'),],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/static'),
+                    os.path.join(BASE_DIR, 'frontend/build'),
+                    os.path.join(BASE_DIR, 'frontend/build/static'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,7 +103,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        """django.contrib.auth.password_validation.
+        UserAttributeSimilarityValidator""",
     },
     {
         'NAME':
@@ -136,6 +148,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'frontend/static'),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend/static'),
                     os.path.join(BASE_DIR, 'frontend/build'),
                     os.path.join(BASE_DIR, 'frontend/build/static')]
